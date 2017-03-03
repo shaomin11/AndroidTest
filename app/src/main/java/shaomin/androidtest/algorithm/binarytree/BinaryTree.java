@@ -1,0 +1,22 @@
+package shaomin.androidtest.algorithm.binarytree;
+
+/**
+ * Created by wangshaomin on 3/3/17.
+ */
+
+public class BinaryTree<K, V> {
+    private BinaryNode<K, V> root;
+
+    public void addTreeNode(K key, V value) {
+        root = add(key, value, root);
+    }
+
+    private BinaryNode<K, V> add(K key, V value, BinaryNode<K, V> node) {
+        if (node == null) {
+            node = new BinaryNode<>(key, value, null, null);
+        }
+
+//        if (key.CompareTo(node.key))
+        return node;
+    }
+}
