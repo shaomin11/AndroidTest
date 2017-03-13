@@ -9,7 +9,7 @@ import java.util.HashSet;
 /**
  * 树节点
  */
-public class BinaryNode<K, V> {
+public class BinaryNode<K extends Comparable<K>, V> {
 
     /**
      * key和value数组

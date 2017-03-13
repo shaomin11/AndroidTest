@@ -4,7 +4,7 @@ package shaomin.androidtest.algorithm.binarytree;
  * Created by wangshaomin on 3/3/17.
  */
 
-public class BinaryTree<K, V> {
+public class BinaryTree<K extends Comparable<K>, V> {
     private BinaryNode<K, V> root;
 
     public void addTreeNode(K key, V value) {
@@ -16,7 +16,9 @@ public class BinaryTree<K, V> {
             node = new BinaryNode<>(key, value, null, null);
         }
 
-//        if (key.CompareTo(node.key))
+        if (key.compareTo(node.key) < 0) {
+
+        }
         return node;
     }
 }
